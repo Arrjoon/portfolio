@@ -8,7 +8,7 @@ export default function About() {
       <h1 className="text-3xl font-bold mb-6">About Me</h1>
       <div className="prose dark:prose-invert max-w-none">
         <p>
-          I'm a passionate frontend developer with 5 years of experience building
+          I am a passionate frontend developer with 5 years of experience building
           modern web applications. My expertise includes React, Next.js, and
           TypeScript.
         </p>
