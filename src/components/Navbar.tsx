@@ -7,8 +7,9 @@ import ThemeToggle from './ThemeToggle';
 const links = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
-  { name: 'Projects', href: '/projects' },
-  { name: 'Contact', href: '/contact' },
+  { name: 'Ideas', href: '/ideas' },
+  { name: 'Development', href: '/development' },
+  { name: 'Blog', href: '/Blogs' },
 ];
 
 export default function Navbar() {
@@ -18,10 +19,10 @@ export default function Navbar() {
     <nav className="border-b border-gray-200 dark:border-gray-800 py-4">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
         <Link href="/" className="text-xl font-bold">
-          JD
+          AN
         </Link>
-        <div className="flex items-center gap-6">
-          <ul className="hidden md:flex gap-6">
+        <div className="flex items-center gap-7 ">
+          <ul className="hidden md:flex gap-6 font-bold">
             {links.map((link) => (
               <li key={link.name}>
                 <Link
