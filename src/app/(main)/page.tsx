@@ -2,6 +2,7 @@
 import AnimatedSection from '@/components/AnimatedSection';
 import BannerSection from '@/components/BannerSection';
 import Skills from '@/components/Experience';
+import Footer from '@/components/Footer';
 import InitialSection from '@/components/InitialSection';
 import ProjectsSection from '@/components/ProjectsSection';
 import WorkExperience from '@/components/WorkExperience';
@@ -27,6 +28,10 @@ export default function Home() {
 
       <AnimatedSection animation="fadeIn" delay={0.4}>
         <Skills />
+      </AnimatedSection>
+      
+      <AnimatedSection animation="slideLeft" delay={0.4}>
+        <Footer/>
       </AnimatedSection>
     </>
   );
