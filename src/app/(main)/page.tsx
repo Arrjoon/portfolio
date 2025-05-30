@@ -15,9 +15,9 @@ export default function Home() {
         <InitialSection />
       </AnimatedSection>
 
-      <AnimatedSection animation="swirl" delay={1}>
-        <WorkTogetherSection/>
-      </AnimatedSection>
+     
+      <WorkTogetherSection/>
+   
 
       <AnimatedSection animation="zoomIn" delay={0.2}>
         <ProjectsSection />
@@ -31,7 +31,10 @@ export default function Home() {
         <Skills />
       </AnimatedSection>
 
-      <ImpactSection/>
+
+      <AnimatedSection animation="swirl" delay={1}>
+        <ImpactSection/>
+      </AnimatedSection>
 
       <AnimatedSection animation="slideLeft" delay={0.4}>
         <Footer/>
