@@ -16,24 +16,45 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <nav className="border-b border-gray-200 dark:border-gray-800 py-4">
+    <nav
+      style={{
+        background: 'var(--background)',
+        color: 'var(--foreground)',
+      }}
+      className="border-b border-gray-300 dark:border-gray-700 py-4 sticky top-0 z-50"
+    >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-        <Link href="/" className="text-xl font-bold">
+        {/* Logo */}
+        <Link href="/" className="text-2xl font-extrabold tracking-tight">
           AN
         </Link>
-        <div className="flex items-center gap-7 ">
-          <ul className="hidden md:flex gap-6 font-bold">
-            {links.map((link) => (
-              <li key={link.name}>
-                <Link
-                  href={link.href}
-                  className={`${pathname === link.href ? 'text-blue-600 dark:text-blue-400' : 'text-gray-600 dark:text-gray-400'} hover:text-blue-600 dark:hover:text-blue-400 transition-colors`}
-                >
-                  {link.name}
-                </Link>
-              </li>
-            ))}
+
+        {/* Navigation Links */}
+        <div className="flex items-center gap-6">
+          <ul className="hidden md:flex gap-6 font-semibold text-sm">
+            {links.map((link) => {
+              const isActive = pathname === link.href;
+              return (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className={`relative transition-colors duration-300 ${
+                      isActive
+                        ? 'text-blue-600 dark:text-blue-400'
+                        : 'text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-300'
+                    }`}
+                  >
+                    {link.name}
+                    {isActive && (
+                      <span className="absolute left-0 -bottom-1 w-full h-0.5 bg-blue-600 dark:bg-blue-400 rounded" />
+                    )}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
+
+          {/* Theme Toggle Button */}
           <ThemeToggle />
         </div>
       </div>
