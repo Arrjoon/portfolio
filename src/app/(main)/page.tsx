@@ -36,9 +36,9 @@ export default function Home() {
         <ImpactSection/>
       </AnimatedSection>
 
-      <AnimatedSection animation="slideLeft" delay={0.4}>
+      {/* <AnimatedSection animation="slideLeft" delay={0.4}>
         <Footer/>
-      </AnimatedSection>
+      </AnimatedSection> */}
     </>
   );
 }

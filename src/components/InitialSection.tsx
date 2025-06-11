@@ -24,7 +24,7 @@ const InitialSection = () => {
             href="/contact" 
             className="px-6 py-3 border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors text-gray-800 dark:text-white"
             >
-            Contact Me
+            Linkedin
           </Link>
         </div>
       </div>
