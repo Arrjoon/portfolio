@@ -32,7 +32,7 @@ export default function Home() {
       </AnimatedSection>
 
 
-      <AnimatedSection  animation="elastic" delay={1}>
+      <AnimatedSection  delay={0.3}>
         <ImpactSection/>
       </AnimatedSection>
 
