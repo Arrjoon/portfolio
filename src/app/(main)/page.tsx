@@ -32,11 +32,11 @@ export default function Home() {
       </AnimatedSection>
 
 
-      <AnimatedSection animation="swirl" delay={1}>
+      <AnimatedSection  animation="elastic" delay={1}>
         <ImpactSection/>
       </AnimatedSection>
 
-      {/* <AnimatedSection animation="slideLeft" delay={0.4}>
+      {/* <AnimatedSection  animation="swirl"  delay={0.4}>
         <Footer/>
       </AnimatedSection> */}
     </>
