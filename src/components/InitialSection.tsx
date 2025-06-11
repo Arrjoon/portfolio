@@ -11,7 +11,7 @@ const InitialSection = () => {
           className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 text-gray-800 dark:text-white"
         />
         <h2 className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 mb-8">
-          Full stack developer Developer 
+          Computer Engineer 
         </h2>
         <div className="flex gap-4 justify-center">
           <Link 
