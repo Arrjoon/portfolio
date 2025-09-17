@@ -52,15 +52,15 @@ const ProjectsSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-900 to-gray-800">
+    <section className="py-20 bg-gradient-to-br bg-section-3 text-text-primary">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center text-white mb-16">
-          My <span className="text-blue-400">Projects</span>
+        <h2 className="text-4xl font-bold text-center mb-16">
+          My Projects
         </h2>
         
         <div className="relative">
           {/* Timeline line */}
-          <div className="hidden md:block absolute left-1/2 h-full w-1 bg-blue-500 transform -translate-x-1/2"></div>
+          <div className="hidden md:block absolute left-1/2 h-full w-1 transform -translate-x-1/2"></div>
           
           {/* Projects container */}
           <div className="space-y-16 md:space-y-32">

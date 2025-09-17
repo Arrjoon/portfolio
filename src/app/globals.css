@@ -1,26 +1,63 @@
 @import "tailwindcss";
 
+/* 🌞 Light mode */
 :root {
-  --background: #d4ebeebf;
-  --foreground: #171717;
+  --bg-primary: #faf9f6;
+  --bg-secondary: #f0f4f9;
+  --text-primary: #1e293b;
+  --text-secondary: #475569;
+  --accent: #2563eb;
+  --accent-hover: #1e40af;
+  --border: #e2e8f0;
+
+  /* Section backgrounds */
+  --bg-section-1: #faf9f6; /* Hero */
+  --bg-section-2: #f8fafc; /* About */
+  --bg-section-3: #f0f4f9; /* Skills */
+  --bg-section-4: #eef2ff; /* Projects */
+  --bg-section-5: #fdf4ff; /* Testimonials */
+  --bg-section-6: #fefce8; /* Contact */
 }
 
+/* 🌙 Dark mode */
+.dark {
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --accent: #38bdf8;
+  --accent-hover: #0ea5e9;
+  --border: #334155;
+
+  /* Section backgrounds */
+  --bg-section-1: #0f172a; /* Hero */
+  --bg-section-2: #1e293b; /* About */
+  --bg-section-3: #1e3a8a; /* Skills */
+  --bg-section-4: #312e81; /* Projects */
+  --bg-section-5: #3b0764; /* Testimonials */
+  --bg-section-6: #422006; /* Contact */
+}
+
+/* Tailwind theme mapping */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary: var(--bg-primary);
+  --color-secondary: var(--bg-secondary);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-border: var(--border);
+
+  /* Section tokens */
+  --color-section-1: var(--bg-section-1);
+  --color-section-2: var(--bg-section-2);
+  --color-section-3: var(--bg-section-3);
+  --color-section-4: var(--bg-section-4);
+  --color-section-5: var(--bg-section-5);
+  --color-section-6: var(--bg-section-6);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* Apply base styles */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply bg-primary text-text-primary transition-colors duration-300;
 }

@@ -5,10 +5,10 @@ import { motion } from 'framer-motion';
 
 const WorkTogetherSection = () => {
   return (
-    <section className="bg-[#0b1d3a] text-white py-20 px-6">
+    <section className="bg-section-2 py-20 px-6 text-text-primary">
       <div className="max-w-5xl mx-auto text-center">
         <motion.h2 
-          className="text-4xl md:text-5xl font-bold text-[#6fffc2] mb-8"
+          className="text-4xl md:text-5xl font-bold  mb-8"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -17,7 +17,7 @@ const WorkTogetherSection = () => {
         </motion.h2>
 
         <motion.p 
-          className="text-lg md:text-xl text-gray-300 leading-relaxed mb-6"
+          className="text-lg md:text-xl text-text-secondary leading-relaxed mb-6"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.6 }}
@@ -26,7 +26,7 @@ const WorkTogetherSection = () => {
         </motion.p>
 
         <motion.p 
-          className="text-lg md:text-xl text-gray-300 leading-relaxed mb-6"
+          className="text-lg md:text-xl text-text-secondary leading-relaxed mb-6"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.6 }}
@@ -35,7 +35,7 @@ const WorkTogetherSection = () => {
         </motion.p>
 
         <motion.p 
-          className="text-lg md:text-xl text-gray-300 leading-relaxed mb-10"
+          className="text-lg md:text-xl text-text-secondary leading-relaxed mb-10"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 0.6 }}

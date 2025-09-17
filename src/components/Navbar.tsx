@@ -16,12 +16,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <nav
-      style={{
-        background: 'var(--background)',
-        color: 'var(--foreground)',
-      }}
-      className="border-b border-gray-300 dark:border-gray-700 py-4 sticky top-0 z-50"
+    <nav className=" bg-secondary py-4 sticky top-0 z-50"
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
         {/* Logo */}
