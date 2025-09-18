@@ -58,29 +58,15 @@ const Skills = () => {
 
   const itemLeft = {
     hidden: { opacity: 0, x: -50, scale: 0.8 },
-    show: { 
-      opacity: 1, 
-      x: 0, 
-      scale: 1,
-      transition: { 
-        type: "spring", 
-        stiffness: 200,
-        damping: 15
-      } 
+    show: { opacity: 1, x: 0, scale: 1,
+      transition: { type: "spring", stiffness: 200, damping: 15 } 
     }
   };
 
   const itemRight = {
     hidden: { opacity: 0, x: 50, scale: 0.8 },
-    show: { 
-      opacity: 1, 
-      x: 0, 
-      scale: 1,
-      transition: { 
-        type: "spring", 
-        stiffness: 200,
-        damping: 15
-      } 
+    show: { opacity: 1, x: 0, scale: 1,
+      transition: { type: "spring", stiffness: 200, damping: 15 } 
     }
   };
 
@@ -104,10 +90,10 @@ const Skills = () => {
         transition={{ duration: 0.6 }}
         className="text-center mb-16"
       >
-        <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-2">
+        <h2 className="text-4xl font-bold mb-2">
           My Skills
         </h2>
-        <div className="w-20 h-1 bg-blue-500 dark:bg-blue-600 mx-auto rounded-full" />
+        <div className="w-20 h-1 mx-auto rounded-full"/>
       </motion.div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -117,9 +103,10 @@ const Skills = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
-            className="text-xl font-semibold mb-6 text-gray-800 dark:text-gray-200 flex items-center gap-2"
+            className="text-xl font-semibold mb-6 flex items-center gap-2"
+            style={{ color: "var(--color-text-secondary)" }}
           >
-            <Code className="text-blue-500" />
+            <Code style={{ color: "var(--color-accent)" }} />
             Technical Skills
           </motion.h3>
           
@@ -134,15 +121,18 @@ const Skills = () => {
                 key={index}
                 variants={itemLeft}
                 whileHover={hoverEffect}
-                className="p-4 rounded-lg bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-sm flex flex-col items-center gap-2"
+                className="p-4 rounded-lg shadow-sm flex flex-col items-center gap-2"
+                style={{
+                  background: "var(--color-card-bg)",
+                  border: "1px solid var(--color-border)"
+                }}
               >
-                <motion.div 
-                  whileHover={iconHover}
-                  className="text-blue-500 dark:text-blue-400"
-                >
+                <motion.div whileHover={iconHover}
+                            style={{ color: "var(--color-accent)" }}>
                   {skill.icon}
                 </motion.div>
-                <span className="font-medium text-gray-800 dark:text-gray-200 text-sm">
+                <span className="font-medium text-sm"
+                      style={{ color: "var(--color-text-primary)" }}>
                   {skill.name}
                 </span>
               </motion.div>
@@ -156,9 +146,10 @@ const Skills = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
-            className="text-xl font-semibold mb-6 text-gray-800 dark:text-gray-200 flex items-center gap-2"
+            className="text-xl font-semibold mb-6 flex items-center gap-2"
+            style={{ color: "var(--color-text-secondary)" }}
           >
-            <Users className="text-purple-500" />
+            <Users style={{ color: "var(--color-accent)" }} />
             Professional Skills
           </motion.h3>
           
@@ -173,15 +164,18 @@ const Skills = () => {
                 key={index}
                 variants={itemRight}
                 whileHover={hoverEffect}
-                className="p-4 rounded-lg bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-sm flex flex-col items-center gap-2"
+                className="p-4 rounded-lg shadow-sm flex flex-col items-center gap-2"
+                style={{
+                  background: "var(--color-card-bg)",
+                  border: "1px solid var(--color-border)"
+                }}
               >
-                <motion.div 
-                  whileHover={iconHover}
-                  className="text-purple-500 dark:text-purple-400"
-                >
+                <motion.div whileHover={iconHover}
+                            style={{ color: "var(--color-accent)" }}>
                   {skill.icon}
                 </motion.div>
-                <span className="font-medium text-gray-800 dark:text-gray-200 text-sm">
+                <span className="font-medium text-sm"
+                      style={{ color: "var(--color-text-primary)" }}>
                   {skill.name}
                 </span>
               </motion.div>

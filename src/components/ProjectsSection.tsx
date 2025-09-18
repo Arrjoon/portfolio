@@ -48,38 +48,46 @@ const ProjectsSection = () => {
       ],
       year: "2021",
       imagePath: "/projects/hospital-management.jpg"
+    },
+    {
+      id: 4,
+      title: "Task Management App",
+      description: "Collaborative task management platform",
+      points: [
+        "Real-time updates with WebSockets",
+        "Team collaboration features",
+        "Project progress tracking",
+        "Built with Next.js and Firebase",
+        "Mobile-responsive design"
+      ],
+      year: "2023",
+      imagePath: "/projects/task-management.jpg"
     }
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br bg-section-3 text-text-primary">
+    <section className="py-20 bg-section-1 text-text-primary">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-16">
           My Projects
         </h2>
         
-        <div className="relative">
-          {/* Timeline line */}
-          <div className="hidden md:block absolute left-1/2 h-full w-1 transform -translate-x-1/2"></div>
-          
-          {/* Projects container */}
-          <div className="space-y-16 md:space-y-32">
-            {projects.map((project, index) => (
-              <ProjectCard 
-                key={project.id} 
-                project={project} 
-                index={index} 
-                isEven={index % 2 === 0}
-              />
-            ))}
-          </div>
+        {/* Grid layout for projects */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          {projects.map((project, index) => (
+            <ProjectCard 
+              key={project.id} 
+              project={project} 
+              index={index}
+            />
+          ))}
         </div>
       </div>
     </section>
   );
 };
 
-const ProjectCard = ({ project, index, isEven }: { project: any, index: number, isEven: boolean }) => {
+const ProjectCard = ({ project, index }: { project: any, index: number }) => {
   const controls = useAnimation();
   const [ref, inView] = useInView({
     threshold: 0.3,
@@ -108,52 +116,45 @@ const ProjectCard = ({ project, index, isEven }: { project: any, index: number, 
   };
 
   return (
-    <div className="container mx-auto px-2 max-w-6xl">
-      <motion.div
-        ref={ref}
-        initial="hidden"
-        animate={controls}
-        variants={variants}
-        className={`relative flex flex-col md:flex-row items-center ${isEven ? 'md:flex-row-reverse' : ''}`}
-      >
-        {/* Timeline dot */}
-        <div className="hidden md:flex absolute left-1/2 h-6 w-6 bg-blue-400 rounded-full transform -translate-x-1/2 -translate-y-1/2 z-10"></div>
+    <motion.div
+      ref={ref}
+      initial="hidden"
+      animate={controls}
+      variants={variants}
+      className="relative bg-section-2 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+    >
+      {/* Year indicator */}
+      <div className="absolute top-4 right-4 bg-accent text-white text-sm font-semibold px-3 py-1 rounded-full z-10">
+        {project.year}
+      </div>
+      
+      {/* Project image */}
+      <div className="relative h-48 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-t from-section-1 to-transparent z-10"></div>
+        <Image 
+          src={project.imagePath} 
+          alt={project.title}
+          fill
+          className="object-cover transform hover:scale-105 transition-transform duration-500"
+          priority={index < 2}
+        />
+      </div>
+      
+      {/* Project content */}
+      <div className="p-6">
+        <h3 className="text-xl font-bold text-text-primary mb-2">{project.title}</h3>
+        <p className="text-text-secondary mb-4">{project.description}</p>
         
-        {/* Project image */}
-        <div className={`md:w-1/2 mb-8 md:mb-0 ${isEven ? 'md:pl-8' : 'md:pr-8'}`}>
-          <div className="relative overflow-hidden rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 group">
-            <Image 
-              src={project.imagePath} 
-              alt={project.title}
-              width={600}
-              height={400}
-              className="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500"
-              priority={index < 2}
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-              <span className="text-white text-lg font-medium">{project.description}</span>
-            </div>
-          </div>
-        </div>
-        
-        {/* Project content */}
-        <div className={`md:w-1/2 ${isEven ? 'md:pr-8 text-right' : 'md:pl-8 text-left'}`}>
-          <div className={`p-6 rounded-lg bg-gray-800 border-l-4 ${isEven ? 'border-blue-400' : 'border-purple-400'}`}>
-            <span className="text-blue-400 font-semibold">{project.year}</span>
-            <h3 className="text-2xl font-bold text-white mt-2 mb-4">{project.title}</h3>
-            <ul className={`space-y-2 ${isEven ? 'ml-auto' : 'mr-auto'}`} style={{ maxWidth: '90%' }}>
-              {project.points.map((point: string, i: number) => (
-                <li key={i} className="text-gray-300 flex items-start">
-                  {!isEven && <span className="text-blue-400 mr-2">•</span>}
-                  <span>{point}</span>
-                  {isEven && <span className="text-blue-400 ml-2">•</span>}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </motion.div>
-    </div>
+        <ul className="space-y-2">
+          {project.points.map((point: string, i: number) => (
+            <li key={i} className="text-text-secondary text-sm flex items-start">
+              <span className="text-accent mr-2">•</span>
+              <span>{point}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </motion.div>
   );
 };
 

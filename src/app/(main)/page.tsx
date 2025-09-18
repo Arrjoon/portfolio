@@ -23,13 +23,15 @@ export default function Home() {
         <ProjectsSection />
       </AnimatedSection>
 
+      <AnimatedSection animation="fadeIn" delay={0.4}>
+        <Skills />
+      </AnimatedSection>
+
       <AnimatedSection animation="scaleUp" delay={0.3}>
         <WorkExperience />
       </AnimatedSection>
 
-      <AnimatedSection animation="fadeIn" delay={0.4}>
-        <Skills />
-      </AnimatedSection>
+      
 
 
       <AnimatedSection  delay={0.3}>

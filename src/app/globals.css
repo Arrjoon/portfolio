@@ -61,3 +61,11 @@
 body {
   @apply bg-primary text-text-primary transition-colors duration-300;
 }
+
+.bg-impact {
+  @apply bg-gradient-to-br from-[#faf9f6] via-[#f0f4f9] to-[#e2e8f0];
+}
+
+.dark .bg-impact {
+  @apply bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#334155];
+}

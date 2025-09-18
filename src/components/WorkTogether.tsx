@@ -8,7 +8,7 @@ const WorkTogetherSection = () => {
     <section className="bg-section-2 py-20 px-6 text-text-primary">
       <div className="max-w-5xl mx-auto text-center">
         <motion.h2 
-          className="text-4xl md:text-5xl font-bold  mb-8"
+          className="text-4xl md:text-5xl font-bold mb-8"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -40,12 +40,12 @@ const WorkTogetherSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 0.6 }}
         >
-          If this resonates with you, let’s connect and create something meaningful.
+          If this resonates with you, let's connect and create something meaningful.
         </motion.p>
 
         <motion.a 
           href="#contact"
-          className="inline-block bg-[#6fffc2] text-[#0b1d3a] font-semibold px-8 py-3 rounded-md border border-[#6fffc2] hover:bg-transparent hover:text-white transition-all duration-300"
+          className="inline-block bg-accent text-impact font-semibold px-8 py-3 rounded-md border border-accent hover:bg-transparent hover:text-text-primary transition-all duration-300"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 0.6 }}
