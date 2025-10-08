@@ -3,7 +3,7 @@ import AnimatedText from "@/components/AnimatedText";
 
 const InitialSection = () => {
   return (
-    <section className="min-h-[80vh] flex flex-col justify-center items-center bg-section-1 p-6">
+    <section className="min-h-[90vh] flex flex-col justify-center items-center bg-section-1 p-6">
       <div className="text-center max-w-3xl">
         <AnimatedText
           text="Hi, I'm Er.Arjun Nepali Currently Fullstack developer"
@@ -14,7 +14,7 @@ const InitialSection = () => {
         </h2>
         <div className="flex gap-4 justify-center">
           <Link
-            href="/projects"
+            href="/development"
             className="px-6 py-3 bg-accent text-white rounded-lg hover:bg-accent-hover transition-colors"
           >
             View Projects

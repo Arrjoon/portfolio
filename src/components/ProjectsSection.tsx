@@ -19,7 +19,7 @@ const ProjectsSection = () => {
         "Deployed with Docker containerization"
       ],
       year: "2023",
-      imagePath: "/projects/resume-extractor.jpg"
+      imagePath: "/projects/resume_extraction.png"
     },
     {
       id: 2,
@@ -33,7 +33,7 @@ const ProjectsSection = () => {
         "Built with Django and MySQL"
       ],
       year: "2022",
-      imagePath: "/projects/ecommerce.jpg"
+      imagePath: "/projects/multivendor_ecommerce.png"
     },
     {
       id: 3,
@@ -51,18 +51,18 @@ const ProjectsSection = () => {
     },
     {
       id: 4,
-      title: "Task Management App",
-      description: "Collaborative task management platform",
+      title: "Dealer Management System",
+      description: "Role-based appliance management platform for manufacturers, dealers, and customers",
       points: [
-        "Real-time updates with WebSockets",
-        "Team collaboration features",
-        "Project progress tracking",
-        "Built with Next.js and Firebase",
-        "Mobile-responsive design"
+        "Developed a role-based appliance management platform for manufacturers, warehouse managers, dealers, customers, and technicians.",
+        "Implemented custom dashboards, purchase order management, bulk sales, and warehouse inventory control.",
+        "Integrated QR code scanning for product purchase registration and repair request tracking workflows.",
+        "Built order management and notification system to track orders and inform users of updates in real-time."
       ],
-      year: "2023",
-      imagePath: "/projects/task-management.jpg"
+      year: "2025",
+      imagePath: "/projects/neo-appliances.jpg"
     }
+
   ];
 
   return (

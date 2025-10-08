@@ -4,7 +4,7 @@ import Skills from '@/components/Experience';
 import Footer from '@/components/Footer';
 import ImpactSection from '@/components/ImpactSection';
 import InitialSection from '@/components/InitialSection';
-import ProjectsSection from '@/components/ProjectsSection';
+import ProjectsCardSection from '@/components/ProjectCard';
 import WorkExperience from '@/components/WorkExperience';
 import WorkTogetherSection from '@/components/WorkTogether';
 
@@ -20,7 +20,7 @@ export default function Home() {
    
 
       <AnimatedSection animation="zoomIn" delay={0.2}>
-        <ProjectsSection />
+        <ProjectsCardSection />
       </AnimatedSection>
 
       <AnimatedSection animation="fadeIn" delay={0.4}>
