@@ -16,11 +16,11 @@ const experiences = [
   {
     id: 2,
     role: "Freelance Developer",
-    company: "Small Projects / Clients",
-    duration: "Jan 2023 – Present",
+    company: "Projects / Clients",
+    duration: "Jan 2024 – Present",
     description:
       "Developed small websites, landing pages, and web apps for individual clients and startups, including deployment, SEO, and performance optimization.",
-    techStack: ["React", "Next.js", "Django", "TailwindCSS", "Figma"],
+    techStack: ["React", "Next.js", "Django", "TailwindCSS"],
   },
 ];
 
