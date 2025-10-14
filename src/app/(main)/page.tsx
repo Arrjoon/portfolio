@@ -1,5 +1,6 @@
 
 import AnimatedSection from '@/components/AnimatedSection';
+import ChatWidget from '@/components/ChatWidget';
 import Skills from '@/components/Experience';
 import Footer from '@/components/Footer';
 import ImpactSection from '@/components/ImpactSection';
@@ -37,6 +38,8 @@ export default function Home() {
       <AnimatedSection  delay={0.3}>
         <ImpactSection/>
       </AnimatedSection>
+
+      <ChatWidget />
 
       {/* <AnimatedSection  animation="swirl"  delay={0.4}>
         <Footer/>
