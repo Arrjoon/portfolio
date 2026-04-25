@@ -1,5 +1,96 @@
-export default function Contact(){
-  return <>
-  <h1>This is contact</h1>
-  </>
+export default function Contact() {
+  return (
+    <section className="relative flex min-h-[calc(100vh-4.5rem)] min-w-0 flex-col overflow-hidden bg-section-1 text-text-primary section-y section-x">
+      <div
+        className="absolute inset-0 -z-30 pointer-events-none bg-gradient-to-b from-section-1 via-slate-200/80 to-slate-200 dark:from-section-1 dark:via-[#0f172a] dark:to-[#0b1220]"
+        aria-hidden
+      />
+      <div className="absolute inset-0 -z-20" aria-hidden>
+        <div
+          className="absolute w-[900px] h-[900px] rounded-full blur-3xl opacity-30 dark:opacity-40"
+          style={{
+            background: "radial-gradient(circle, var(--color-accent) 0%, transparent 70%)",
+            top: "-10%",
+            left: "-10%",
+          }}
+        />
+        <div
+          className="absolute w-[800px] h-[800px] rounded-full blur-3xl opacity-20 dark:opacity-30"
+          style={{
+            background: "radial-gradient(circle, #6366f1 0%, transparent 70%)",
+            bottom: "-10%",
+            right: "-10%",
+          }}
+        />
+      </div>
+      <div
+        className="absolute inset-0 -z-10 pointer-events-none bg-[radial-gradient(ellipse_90%_75%_at_55%_40%,rgba(37,99,235,0.1),transparent_60%)] dark:bg-[radial-gradient(ellipse_85%_70%_at_55%_42%,rgba(255,255,255,0.12),transparent_55%)]"
+        aria-hidden
+      />
+      <div
+        className="absolute inset-0 -z-10 pointer-events-none opacity-[0.04] dark:opacity-[0.07] bg-[size:32px_32px] bg-[linear-gradient(rgba(15,23,42,0.12)_1px,transparent_1px),linear-gradient(90deg,rgba(15,23,42,0.1)_1px,transparent_1px)] dark:bg-[linear-gradient(rgba(255,255,255,0.14)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.12)_1px,transparent_1px)]"
+        aria-hidden
+      />
+
+      <div className="relative z-10 mx-auto w-full max-w-2xl">
+        <div className="rounded-2xl border border-slate-300/90 bg-white/85 p-6 shadow-xl backdrop-blur-sm dark:border-slate-700/70 dark:bg-slate-900/85 sm:p-8">
+          <h1 className="text-3xl md:text-4xl text-heading-primary mb-3">Contact Me</h1>
+          <p className="text-body-secondary mb-8">
+            Send a message and I will get back to you soon.
+          </p>
+
+          <form action="https://formspree.io/f/xvzdyzpy" method="POST" className="space-y-5">
+            <div>
+              <label htmlFor="name" className="mb-2 block text-sm font-semibold text-body-secondary">
+                Name
+              </label>
+              <input
+                id="name"
+                type="text"
+                name="name"
+                required
+                className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 outline-none transition focus:border-accent focus:ring-2 focus:ring-accent/20 dark:border-slate-600 dark:bg-slate-950/70 dark:text-white"
+                placeholder="Your name"
+              />
+            </div>
+
+            <div>
+              <label htmlFor="email" className="mb-2 block text-sm font-semibold text-body-secondary">
+                Email
+              </label>
+              <input
+                id="email"
+                type="email"
+                name="email"
+                required
+                className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 outline-none transition focus:border-accent focus:ring-2 focus:ring-accent/20 dark:border-slate-600 dark:bg-slate-950/70 dark:text-white"
+                placeholder="you@example.com"
+              />
+            </div>
+
+            <div>
+              <label htmlFor="message" className="mb-2 block text-sm font-semibold text-body-secondary">
+                Message
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                rows={6}
+                required
+                className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 outline-none transition focus:border-accent focus:ring-2 focus:ring-accent/20 dark:border-slate-600 dark:bg-slate-950/70 dark:text-white"
+                placeholder="Write your message..."
+              />
+            </div>
+
+            <button
+              type="submit"
+              className="w-full rounded-xl bg-gradient-to-r from-accent to-indigo-500 px-6 py-3 font-semibold text-white shadow-md transition hover:opacity-95"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  );
 }
