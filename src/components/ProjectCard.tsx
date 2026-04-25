@@ -119,7 +119,7 @@ function ProjectCard({
   index: number;
 }) {
   return (
-    <article className="group relative overflow-hidden rounded-2xl border border-slate-200/90 bg-white/60 shadow-lg backdrop-blur-sm transition-shadow duration-200 hover:shadow-2xl dark:border-white/15 dark:bg-slate-900/45">
+    <article className="group relative overflow-hidden rounded-2xl border border-slate-300/90 bg-white/85 shadow-lg backdrop-blur-sm transition-shadow duration-200 hover:shadow-2xl dark:border-slate-700/70 dark:bg-slate-900/85">
       <div
         className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-200 group-hover:opacity-100"
         style={{
@@ -144,14 +144,16 @@ function ProjectCard({
 
       <div className="relative z-10 p-6">
         <h3 className="mb-3 text-2xl text-heading-primary">{project.title}</h3>
-        <p className="text-body-secondary mb-5 leading-relaxed">{project.description}</p>
+        <p className="mb-5 leading-relaxed text-slate-700 dark:text-slate-100">
+          {project.description}
+        </p>
         <ul className="space-y-3">
           {project.points.map((point, i) => (
-            <li key={i} className="group/item flex items-start text-sm text-body-secondary">
+            <li key={i} className="group/item flex items-start text-sm text-slate-700 dark:text-slate-100">
               <span className="text-accent mt-0.5 mr-3 text-lg" aria-hidden>
                 ✓
               </span>
-              <span className="group-hover/item:text-text-primary transition-colors">
+              <span className="transition-colors group-hover/item:text-slate-900 dark:group-hover/item:text-white">
                 {point}
               </span>
             </li>
