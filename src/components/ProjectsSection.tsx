@@ -56,7 +56,7 @@ const projects = [
       "Built order management and notification system to track orders and inform users of updates in real-time.",
     ],
     year: "2025",
-    imagePath: "/projects/neo-appliances.jpg",
+    imagePath: "/projects/neo-appliance.jpg",
   },
 ];
 
