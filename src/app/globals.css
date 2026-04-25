@@ -10,7 +10,7 @@
   --accent-hover: #1e40af;
   --border: #e2e8f0;
 
-  /* Section surfaces — one base tone; layers come from SectionSurface / hero */
+  /* Section surfaces — one base tone; layers are now inlined in each section */
   --bg-section-1: #faf9f6;
   --bg-section-2: #faf9f6;
   --bg-section-3: #faf9f6;

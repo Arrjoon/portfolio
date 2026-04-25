@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import AnimatedText from "@/components/AnimatedText";
-import SectionSurface from "@/components/SectionSurface";
 import { motion } from "framer-motion";
 
 type FloatingIconProps = {
@@ -45,7 +44,39 @@ const InitialSection = () => {
   );
 
   return (
-    <SectionSurface className="section-x min-h-screen items-center justify-center py-20 sm:py-24">
+    <section className="relative flex min-h-screen min-w-0 flex-col items-center justify-center overflow-hidden bg-section-1 text-text-primary section-x py-20 sm:py-24">
+      <div
+        className="absolute inset-0 -z-30 pointer-events-none bg-gradient-to-b from-section-1 via-slate-200/80 to-slate-200 dark:from-section-1 dark:via-[#0f172a] dark:to-[#0b1220]"
+        aria-hidden
+      />
+      <div className="absolute inset-0 -z-20" aria-hidden>
+        <div
+          className="absolute w-[900px] h-[900px] rounded-full blur-3xl opacity-30 dark:opacity-40"
+          style={{
+            background: "radial-gradient(circle, var(--color-accent) 0%, transparent 70%)",
+            top: "-10%",
+            left: "-10%",
+          }}
+        />
+        <div
+          className="absolute w-[800px] h-[800px] rounded-full blur-3xl opacity-20 dark:opacity-30"
+          style={{
+            background: "radial-gradient(circle, #6366f1 0%, transparent 70%)",
+            bottom: "-10%",
+            right: "-10%",
+          }}
+        />
+      </div>
+      <div
+        className="absolute inset-0 -z-10 pointer-events-none bg-[radial-gradient(ellipse_90%_75%_at_55%_40%,rgba(37,99,235,0.1),transparent_60%)] dark:bg-[radial-gradient(ellipse_85%_70%_at_55%_42%,rgba(255,255,255,0.12),transparent_55%)]"
+        aria-hidden
+      />
+      <div
+        className="absolute inset-0 -z-10 pointer-events-none opacity-[0.04] dark:opacity-[0.07] bg-[size:32px_32px] bg-[linear-gradient(rgba(15,23,42,0.12)_1px,transparent_1px),linear-gradient(90deg,rgba(15,23,42,0.1)_1px,transparent_1px)] dark:bg-[linear-gradient(rgba(255,255,255,0.14)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.12)_1px,transparent_1px)]"
+        aria-hidden
+      />
+
+      <div className="relative z-10 flex min-h-0 w-full min-w-0 flex-1 flex-col">
       <div className="absolute inset-0 z-[1] pointer-events-none hidden sm:block" aria-hidden>
         <FloatingIcon icon="⚛️" x={8} y={20} size={40} delay={0} />
         <FloatingIcon icon="🚀" x={88} y={18} size={36} delay={1} />
@@ -54,18 +85,18 @@ const InitialSection = () => {
         <FloatingIcon icon="⚡" x={50} y={10} size={28} delay={1.5} />
       </div>
 
-      <div className="relative z-[2] w-full max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-14 xl:gap-20">
+      <div className="relative z-[2] w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-14 xl:gap-20">
         <motion.div
           initial={{ opacity: 0, x: -24 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          className="w-full shrink-0 lg:w-[min(48%,28rem)] flex justify-center lg:justify-end"
+          className="w-full shrink-0 lg:w-[min(52%,32rem)] flex justify-center lg:justify-end"
         >
           <div className="w-full max-w-sm sm:max-w-md lg:max-w-none">
             <img
               src="/profile_photo.png"
               alt="Arjun"
-              className="w-full h-auto min-h-[360px] sm:min-h-[360px] lg:min-h-[420px] max-h-[55vh] lg:max-h-[min(75vh,36rem)] object-cover object-top"
+              className="w-full h-auto min-h-[420px] sm:min-h-[460px] lg:min-h-[540px] max-h-[68vh] lg:max-h-[min(84vh,46rem)] object-cover object-top"
             />
           </div>
         </motion.div>
@@ -117,7 +148,7 @@ const InitialSection = () => {
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.97 }}>
               <Link
                 href="https://www.linkedin.com/in/arjun-nepali-32b876244/"
-                className="inline-block px-8 sm:px-10 py-3.5 sm:py-4 rounded-xl border border-slate-300 text-slate-800 hover:bg-slate-100/80 transition dark:border-white/30 dark:text-white/90 dark:hover:bg-white/10"
+                className="inline-block px-8 sm:px-10 py-3.5 sm:py-4 rounded-xl border border-slate-300 text-white hover:bg-slate-100/80 transition dark:border-white/30 dark:text-white/90 dark:hover:bg-white/10"
               >
                 LinkedIn
               </Link>
@@ -125,7 +156,8 @@ const InitialSection = () => {
           </div>
         </div>
       </div>
-    </SectionSurface>
+      </div>
+    </section>
   );
 };
 
