@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
-import { motion } from "framer-motion";
 import { Briefcase } from "lucide-react";
+import SectionSurface from "@/components/SectionSurface";
 
 const experiences = [
   {
@@ -26,55 +26,45 @@ const experiences = [
 
 const WorkExperience = () => {
   return (
-    <section className="relative bg-impact min-h-screen text-text-primary">
-      <div className="relative z-10 px-4 md:px-12 py-16">
-        <h2 className="text-3xl font-bold mb-10 text-center">
+    <SectionSurface className="section-y section-x text-text-primary">
+      <div>
+        <h2 className="mb-10 text-center text-3xl text-heading-primary">
           Work & Freelance Experience
         </h2>
 
-        <div className="space-y-10 max-w-3xl mx-auto">
-          {experiences.map((exp, index) => (
-            <motion.div
+        <div className="mx-auto max-w-3xl space-y-10">
+          {experiences.map((exp) => (
+            <div
               key={exp.id}
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-              viewport={{ once: true }}
-              className="relative backdrop-blur-lg p-6 shadow-xl rounded-lg" // Removed border-l-4 border-accent
+              className="relative rounded-lg border border-slate-200/90 bg-white/60 p-6 shadow-xl backdrop-blur-sm dark:border-white/15 dark:bg-slate-900/45"
             >
-              {/* Icon */}
-              <div className="absolute -left-4 top-4 p-2 rounded-full bg-accent text-white">
+              <div className="absolute -left-4 top-4 rounded-full bg-accent p-2 text-white">
                 <Briefcase className="h-5 w-5" />
               </div>
 
-              {/* Role */}
-              <h3 className="text-xl font-semibold">{exp.role}</h3>
+              <h3 className="text-xl text-heading-primary">{exp.role}</h3>
 
-              {/* Company */}
-              <p className="text-sm text-text-secondary">{exp.company}</p>
+              <p className="text-sm text-body-secondary">{exp.company}</p>
 
-              {/* Duration */}
               <p className="text-sm font-medium mb-3 text-accent">{exp.duration}</p>
 
-              {/* Description */}
-              <p>{exp.description}</p>
+              <p className="text-body-secondary">{exp.description}</p>
 
-              {/* Tech stack */}
               <div className="mt-4 flex flex-wrap gap-2">
                 {exp.techStack.map((tech) => (
                   <span
                     key={tech}
-                    className="text-xs px-2 py-1 rounded-full bg-accent text-white"
+                    className="rounded-full bg-accent px-2 py-1 text-xs text-white"
                   >
                     {tech}
                   </span>
                 ))}
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
-    </section>
+    </SectionSurface>
   );
 };
 export default WorkExperience;

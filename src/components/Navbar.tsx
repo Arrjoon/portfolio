@@ -35,7 +35,7 @@ export default function Navbar() {
                     className={`relative transition-colors duration-300 ${
                       isActive
                         ? 'text-accent' // Using global accent color
-                        : 'text-text-secondary hover:text-accent' // Using global text-secondary and accent colors
+                        : "text-body-secondary hover:text-accent"
                     }`}
                   >
                     {link.name}

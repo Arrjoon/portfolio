@@ -4,7 +4,7 @@ export const metadata = {
 
 export default function About() {
   return (
-    <section className="text-center max-w-3xl mx-auto py-12 px-4">
+    <section className="section-y section-x mx-auto max-w-3xl text-center">
       <h1 className="text-4xl font-bold mb-8 text-text-primary">About Me</h1>
       <div className="prose dark:prose-invert max-w-none text-text-primary text-lg">
         <p className="mb-6">
@@ -19,7 +19,7 @@ export default function About() {
         <div className="space-y-6">
           <div>
             <h3 className="text-xl font-medium mb-2 text-text-primary">Creative Problem-Solving</h3>
-            <p className="text-text-secondary">
+            <p className="text-body-secondary">
               I thrive on tackling complex challenges and finding innovative solutions 
               that balance technical excellence with practical usability.
             </p>
@@ -27,7 +27,7 @@ export default function About() {
           
           <div>
             <h3 className="text-xl font-medium mb-2 text-text-primary">Continuous Learning</h3>
-            <p className="text-text-secondary">
+            <p className="text-body-secondary">
               In the rapidly evolving tech landscape, I maintain a growth mindset, 
               constantly exploring new technologies and methodologies to enhance my skills.
             </p>
@@ -35,7 +35,7 @@ export default function About() {
           
           <div>
             <h3 className="text-xl font-medium mb-2 text-text-primary">Collaborative Spirit</h3>
-            <p className="text-text-secondary">
+            <p className="text-body-secondary">
               I believe the best products are built through teamwork, open communication, 
               and shared vision. I value diverse perspectives and constructive feedback.
             </p>
@@ -43,7 +43,7 @@ export default function About() {
           
           <div>
             <h3 className="text-xl font-medium mb-2 text-text-primary">User-Centered Design</h3>
-            <p className="text-text-secondary">
+            <p className="text-body-secondary">
               Every line of code I write is guided by the end-user's experience. 
               I prioritize accessibility, performance, and intuitive interfaces.
             </p>

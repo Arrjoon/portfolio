@@ -10,13 +10,13 @@
   --accent-hover: #1e40af;
   --border: #e2e8f0;
 
-  /* Section backgrounds */
-  --bg-section-1: #faf9f6; /* Hero */
-  --bg-section-2: #f8fafc; /* About */
-  --bg-section-3: #f0f4f9; /* Skills */
-  --bg-section-4: #eef2ff; /* Projects */
-  --bg-section-5: #fdf4ff; /* Testimonials */
-  --bg-section-6: #fefce8; /* Contact */
+  /* Section surfaces — one base tone; layers come from SectionSurface / hero */
+  --bg-section-1: #faf9f6;
+  --bg-section-2: #faf9f6;
+  --bg-section-3: #faf9f6;
+  --bg-section-4: #faf9f6;
+  --bg-section-5: #faf9f6;
+  --bg-section-6: #faf9f6;
 }
 
 /* 🌙 Dark mode */
@@ -24,18 +24,18 @@
   --bg-primary: #0f172a;
   --bg-secondary: #1e293b;
   --text-primary: #f1f5f9;
-  --text-secondary: #94a3b8;
+  /* Body / “small” text: light on dark (was slate-400; too dim vs headings) */
+  --text-secondary: #e2e8f0;
   --accent: #38bdf8;
   --accent-hover: #0ea5e9;
   --border: #334155;
 
-  /* Section backgrounds */
-  --bg-section-1: #0f172a; /* Hero */
-  --bg-section-2: #1e293b; /* About */
-  --bg-section-3: #1e3a8a; /* Skills */
-  --bg-section-4: #312e81; /* Projects */
-  --bg-section-5: #3b0764; /* Testimonials */
-  --bg-section-6: #422006; /* Contact */
+  --bg-section-1: #0f172a;
+  --bg-section-2: #0f172a;
+  --bg-section-3: #0f172a;
+  --bg-section-4: #0f172a;
+  --bg-section-5: #0f172a;
+  --bg-section-6: #0f172a;
 }
 
 /* Tailwind theme mapping */
@@ -62,12 +62,23 @@ body {
   @apply bg-primary text-text-primary transition-colors duration-300;
 }
 
-.bg-impact {
-  @apply bg-gradient-to-br from-[#faf9f6] via-[#f0f4f9] to-[#e2e8f0];
+/* Section titles: blue in light mode, white in dark mode (replaces multi-stop gradients) */
+.text-heading-primary {
+  @apply font-bold text-accent dark:text-white;
 }
 
-.dark .bg-impact {
-  @apply bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#334155];
+/* One rhythm for stackable sections: vertical + horizontal padding */
+.section-x {
+  @apply px-4 sm:px-6 lg:px-10;
+}
+
+.section-y {
+  @apply py-20 md:py-24;
+}
+
+/* Secondary copy; dark mode: near-white for readability */
+.text-body-secondary {
+  @apply text-text-secondary dark:text-white/90;
 }
 
 /* Enhanced 3D effects and animations */
@@ -89,8 +100,10 @@ body {
   }
 }
 
-.dark @keyframes glow {
-  0%, 100% {
+/* Dark theme glow — use `animation: glow-dark 1.5s ease infinite` under `.dark` */
+@keyframes glow-dark {
+  0%,
+  100% {
     box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
   }
   50% {
