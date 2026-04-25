@@ -138,7 +138,7 @@ const InitialSection = () => {
           <div className="flex gap-3 sm:gap-4 flex-wrap justify-center lg:justify-start w-full">
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.97 }}>
               <Link
-                href="www.linkedin.com/in/arjun-nepali"
+                href="https://www.linkedin.com/in/arjun-nepali/"
                 className="inline-block px-8 sm:px-10 py-3.5 sm:py-4 rounded-xl font-semibold text-white bg-gradient-to-r from-accent to-indigo-500 shadow-md dark:shadow-[0_10px_40px_-8px_rgba(99,102,241,0.55)]"
               >
                 LinkedIn
