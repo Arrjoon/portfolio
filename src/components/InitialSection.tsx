@@ -138,19 +138,19 @@ const InitialSection = () => {
           <div className="flex gap-3 sm:gap-4 flex-wrap justify-center lg:justify-start w-full">
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.97 }}>
               <Link
-                href="/development"
+                href="www.linkedin.com/in/arjun-nepali"
                 className="inline-block px-8 sm:px-10 py-3.5 sm:py-4 rounded-xl font-semibold text-white bg-gradient-to-r from-accent to-indigo-500 shadow-md dark:shadow-[0_10px_40px_-8px_rgba(99,102,241,0.55)]"
               >
-                View Projects
+                LinkedIn
               </Link>
             </motion.div>
 
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.97 }}>
               <Link
-                href="https://www.linkedin.com/in/arjun-nepali-32b876244/"
+                href="https://github.com/arrjoon"
                 className="inline-block px-8 sm:px-10 py-3.5 sm:py-4 rounded-xl border border-slate-300 text-white hover:bg-slate-100/80 transition dark:border-white/30 dark:text-white/90 dark:hover:bg-white/10"
               >
-                LinkedIn
+                GitHub
               </Link>
             </motion.div>
           </div>
