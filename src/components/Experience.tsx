@@ -35,17 +35,17 @@ const hardSkills = [
   { name: "Next.js", icon: <SiNextdotjs size={32} />, color: "#000000" },
   { name: "JavaScript", icon: <SiJavascript size={32} />, color: "#F7DF1E" },
   { name: "TypeScript", icon: <SiTypescript size={32} />, color: "#3178C6" },
-  { name: "Node.js", icon: <SiNodedotjs size={32} />, color: "#339933" },
-  { name: "Express", icon: <SiExpress size={32} />, color: "#000000" },
+  // { name: "Node.js", icon: <SiNodedotjs size={32} />, color: "#339933" },
+  // { name: "Express", icon: <SiExpress size={32} />, color: "#000000" },
   { name: "PostgreSQL", icon: <SiPostgresql size={32} />, color: "#4169E1" },
-  { name: "MongoDB", icon: <SiMongodb size={32} />, color: "#47A248" },
+  // { name: "MongoDB", icon: <SiMongodb size={32} />, color: "#47A248" },
   { name: "Tailwind CSS", icon: <SiTailwindcss size={32} />, color: "#06B6D4" },
-  { name: "TensorFlow", icon: <SiTensorflow size={32} />, color: "#FF6F00" },
-  { name: "Flask", icon: <SiFlask size={32} />, color: "#000000" },
+  // { name: "TensorFlow", icon: <SiTensorflow size={32} />, color: "#FF6F00" },
+  // { name: "Flask", icon: <SiFlask size={32} />, color: "#000000" },
   { name: "Git", icon: <SiGit size={32} />, color: "#F05032" },
   { name: "Docker", icon: <SiDocker size={32} />, color: "#2496ED" },
   { name: "Redis", icon: <SiRedis size={32} />, color: "#DC382D" },
-  { name: "AWS", icon: <SiAmazon size={32} />, color: "#FF9900" },
+  // { name: "AWS", icon: <SiAmazon size={32} />, color: "#FF9900" },
 ];
 
 const softSkills = [
