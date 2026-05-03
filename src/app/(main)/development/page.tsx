@@ -43,11 +43,7 @@ export default function DevelopmentPage() {
       />
 
       <div className="relative z-10 mx-auto w-full max-w-3xl">
-        <h1 className="mb-2 text-3xl font-bold text-heading-primary md:text-4xl">Projects</h1>
-        <p className="mb-8 text-body-secondary">
-          A compact index of work. The link column opens the live site when available, otherwise the
-          GitHub repo. Use <span className="whitespace-nowrap">View</span> for the full project page.
-        </p>
+        <h1 className="mb-6 text-3xl font-bold text-heading-primary md:text-4xl ">Projects</h1>
         <DevelopmentProjectsTable projects={projects} />
       </div>
     </section>
