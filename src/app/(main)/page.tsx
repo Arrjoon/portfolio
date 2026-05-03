@@ -14,7 +14,7 @@ export default function Home() {
 
       <WorkTogetherSection />
 
-      <ProjectsCardSection />
+      {/* <ProjectsCardSection /> */}
 
       <Skills />
 

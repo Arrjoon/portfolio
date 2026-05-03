@@ -6,10 +6,10 @@ import ThemeToggle from './ThemeToggle';
 
 const links = [
   { name: 'Home', href: '/' },
-  { name: 'About', href: '/about' },
   { name: 'Contact', href: '/contact' },
   { name: 'Development', href: '/development' },
-  { name: 'Blog', href: '/Blogs' },
+  { name: 'My Resume', href: '/myresume' },
+  // { name: 'Blog', href: '/Blogs' },
 ];
 
 export default function Navbar() {

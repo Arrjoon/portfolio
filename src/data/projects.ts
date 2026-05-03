@@ -1,3 +1,5 @@
+import type { ResumeProject } from "./resume";
+
 /** Replace repoUrl (and optional liveUrl) with your real links. */
 export type PortfolioProject = {
   id: number;
@@ -14,6 +16,8 @@ export type PortfolioProject = {
   liveUrl?: string;
   /** Source code (e.g. GitHub) — shown when there is no liveUrl, and on the detail page */
   repoUrl?: string;
+  /** When true, this project is listed under “Key software projects” on `/myresume`. */
+  is_key_project?: boolean;
 };
 
 export const portfolioProjects: PortfolioProject[] = [
@@ -35,6 +39,7 @@ export const portfolioProjects: PortfolioProject[] = [
     ],
     imagePath: "/projects/multivendor_ecommerce.png",
     repoUrl: "https://github.com/arjun-nepali/multi-tenant-saas-news-platform",
+    is_key_project: true,
   },
   {
     id: 2,
@@ -54,6 +59,7 @@ export const portfolioProjects: PortfolioProject[] = [
     ],
     imagePath: "/projects/resume_extraction.png",
     repoUrl: "https://github.com/Arrjoon/localchat-frontend",
+    is_key_project: true,
   },
   {
     id: 3,
@@ -74,6 +80,7 @@ export const portfolioProjects: PortfolioProject[] = [
     ],
     imagePath: "/projects/resume_extraction.png",
     repoUrl: "https://github.com/Arrjoon/helpdesk_ai",
+    is_key_project: true,
   },
   {
     id: 4,
@@ -93,6 +100,7 @@ export const portfolioProjects: PortfolioProject[] = [
     ],
     imagePath: "/projects/neo-appliances.jpg",
     // repoUrl: "https://github.com/arjun-nepali/dealer-management-system",
+    is_key_project: true,
   },
   {
     id: 5,
@@ -114,6 +122,7 @@ export const portfolioProjects: PortfolioProject[] = [
     imagePath: "/projects/hospital-management.jpg",
     liveUrl: "https://www.abhiyandaily.com/",
     // repoUrl: "https://github.com/arjun-nepali/aarthik-abhiyan"
+    is_key_project: true,
   },
   {
     id: 6,
@@ -174,4 +183,24 @@ export function getProjectBySlug(slug: string): PortfolioProject | undefined {
 
 export function getProjectsSortedByDateDesc(): PortfolioProject[] {
   return [...portfolioProjects].sort((a, b) => b.date.localeCompare(a.date));
+}
+
+function resumeMetaLine(p: PortfolioProject): string {
+  const year = p.date.slice(0, 4);
+  const thisYear = String(new Date().getFullYear());
+  const when = year >= thisYear ? "Present" : year;
+  return `${p.stack} · ${when}`;
+}
+
+/** Projects with `is_key_project: true`, newest first — `/myresume` “Key software projects”. */
+export function getKeyProjectsForResume(): ResumeProject[] {
+  return [...portfolioProjects]
+    .filter((p) => p.is_key_project === true)
+    .sort((a, b) => b.date.localeCompare(a.date))
+    .map((p) => ({
+      title: p.title,
+      meta: resumeMetaLine(p),
+      bullets: p.points,
+      slug: p.slug,
+    }));
 }
