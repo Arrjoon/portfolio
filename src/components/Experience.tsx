@@ -58,8 +58,9 @@ const softSkills = [
 ];
 
 const skillCardClass =
-  "group relative flex cursor-default flex-col items-center gap-3 overflow-hidden rounded-2xl p-5 transition-shadow duration-200 hover:shadow-md " +
-  "border border-slate-200/80 bg-white/50 backdrop-blur-sm dark:border-white/10 dark:bg-slate-900/30";
+  "group relative flex cursor-default flex-col items-center gap-3 overflow-hidden rounded-2xl p-5 transition-shadow duration-200 " +
+  "border border-slate-200/80 shadow-[0_4px_6px_rgba(0,0,0,0.08)] backdrop-blur-sm hover:shadow-md " +
+  "dark:bg-transparent dark:shadow-none dark:backdrop-blur-none dark:hover:shadow-none";
 
 const Skills = () => {
   return (
@@ -114,13 +115,7 @@ const Skills = () => {
 
               <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
                 {hardSkills.map((skill) => (
-                  <div
-                    key={skill.name}
-                    className={skillCardClass}
-                    style={{
-                      boxShadow: "0 4px 6px rgba(0,0,0,0.08)",
-                    }}
-                  >
+                  <div key={skill.name} className={skillCardClass}>
                     <div
                       className="absolute inset-0 opacity-0 transition-opacity duration-200 group-hover:opacity-100"
                       style={{
@@ -155,13 +150,7 @@ const Skills = () => {
 
               <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
                 {softSkills.map((skill) => (
-                  <div
-                    key={skill.name}
-                    className={skillCardClass}
-                    style={{
-                      boxShadow: "0 4px 6px rgba(0,0,0,0.08)",
-                    }}
-                  >
+                  <div key={skill.name} className={skillCardClass}>
                     <div className="absolute inset-0 bg-accent/10 opacity-0 transition-opacity duration-200 group-hover:opacity-100" />
                     <div className="relative z-10 text-accent transition-transform duration-200 group-hover:scale-105">
                       {skill.icon}

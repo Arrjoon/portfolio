@@ -139,7 +139,7 @@ const InitialSection = () => {
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.97 }}>
               <Link
                 href="https://www.linkedin.com/in/arjun-nepali/"
-                className="inline-block px-8 sm:px-10 py-3.5 sm:py-4 rounded-xl font-semibold text-white bg-gradient-to-r from-accent to-indigo-500 shadow-md dark:shadow-[0_10px_40px_-8px_rgba(99,102,241,0.55)]"
+                className="inline-block px-8 sm:px-10 py-3.5 sm:py-4 rounded-xl border border-slate-300 text-white hover:bg-slate-100/80 transition dark:border-white/30 bg-gradient-to-r from-accent to-accent-hover dark:text-white/90 dark:hover:bg-white/10"
               >
                 LinkedIn
               </Link>

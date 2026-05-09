@@ -10,7 +10,7 @@ const experiences = [
     company: "Prixa Technologies",
     duration: "Apr 2023 – Present",
     description:
-      "Working for 1+ year on various news websites and digital platforms. Responsible for developing, maintaining, and optimizing modern web applications.",
+      "Working for 2 year on various news,fantech,inventory, and digital platforms. Responsible for developing, maintaining, and optimizing modern web applications.",
     techStack: ["Next.js", "Django", "PostgreSQL", "TailwindCSS"],
   },
   {
@@ -66,11 +66,11 @@ const WorkExperience = () => {
           <div className="mx-auto h-1.5 w-24 rounded-full bg-gradient-to-r from-transparent via-accent to-transparent" />
         </div>
 
-        <div className="mx-auto flex max-w-3xl flex-col gap-10 md:gap-12">
+        <div className="mx-auto flex max-w-7xl flex-col gap-10 md:gap-12">
           {experiences.map((exp) => (
             <article
               key={exp.id}
-              className="rounded-2xl border border-slate-200/90 bg-white/85 p-6 text-slate-900 shadow-lg backdrop-blur-sm dark:border-border dark:bg-secondary dark:text-slate-100 dark:shadow-[0_4px_24px_rgba(0,0,0,0.35)] md:p-8"
+              className="rounded-2xl border border-slate-200/90 p-6 dark:text-white text-slate-900 shadow-lg backdrop-blur-sm dark:border-border dark:bg-secondary dark:text-slate-100 dark:shadow-[0_4px_24px_rgba(0,0,0,0.35)] md:p-8"
             >
               <div className="flex gap-4 sm:gap-5">
                 <div
@@ -93,7 +93,7 @@ const WorkExperience = () => {
                   <p className="mt-4 leading-relaxed text-slate-700 dark:text-slate-300">
                     {exp.description}
                   </p>
-                  <div className="mt-5 flex flex-wrap gap-2">
+                  {/* <div className="mt-5 flex flex-wrap gap-2">
                     {exp.techStack.map((tech) => (
                       <span
                         key={tech}
@@ -102,7 +102,7 @@ const WorkExperience = () => {
                         {tech}
                       </span>
                     ))}
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </article>
