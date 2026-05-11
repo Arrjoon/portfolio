@@ -33,7 +33,7 @@ export default function Contact() {
       />
 
       <div className="relative z-10 mx-auto w-full max-w-2xl">
-        <div className="rounded-2xl border border-slate-300/90 bg-white/85 p-6 shadow-xl backdrop-blur-sm dark:border-slate-700/70 dark:bg-slate-900/85 sm:p-8">
+        <div className="rounded-2xl border border-slate-300/90 p-6 shadow-xl backdrop-blur-sm dark:border-slate-700/70 dark:bg-slate-900/85 sm:p-8">
           <h1 className="text-3xl md:text-4xl text-heading-primary mb-3">Contact Me</h1>
           <p className="text-body-secondary mb-8">
             Send a message and I will get back to you soon.
@@ -49,7 +49,7 @@ export default function Contact() {
                 type="text"
                 name="name"
                 required
-                className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 outline-none transition focus:border-accent focus:ring-2 focus:ring-accent/20 dark:border-slate-600 dark:bg-slate-950/70 dark:text-white"
+                className="w-full rounded-xl border border-slate-300/90 transparent px-4 py-3  outline-none transition focus:border-accent focus:ring-2 focus:ring-accent/20  dark:bg-slate-950/70 dark:text-white"
                 placeholder="Your name"
               />
             </div>
@@ -63,7 +63,7 @@ export default function Contact() {
                 type="email"
                 name="email"
                 required
-                className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 outline-none transition focus:border-accent focus:ring-2 focus:ring-accent/20 dark:border-slate-600 dark:bg-slate-950/70 dark:text-white"
+                className="w-full rounded-xl border border-slate-300/90 transparent px-4 py-3  outline-none transition focus:border-accent focus:ring-2 focus:ring-accent/20 dark:text-white"
                 placeholder="you@example.com"
               />
             </div>
@@ -77,7 +77,7 @@ export default function Contact() {
                 name="message"
                 rows={6}
                 required
-                className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 outline-none transition focus:border-accent focus:ring-2 focus:ring-accent/20 dark:border-slate-600 dark:bg-slate-950/70 dark:text-white"
+                className="w-full rounded-xl border border-slate-300/90 transparent px-4 py-3  outline-none transition focus:border-accent focus:ring-2 focus:ring-accent/20 dark:text-white"
                 placeholder="Write your message..."
               />
             </div>
