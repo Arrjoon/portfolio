@@ -85,7 +85,7 @@ const InitialSection = () => {
         <FloatingIcon icon="⚡" x={50} y={10} size={28} delay={1.5} />
       </div>
 
-      <div className="relative z-[2] w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-14 xl:gap-20">
+      <div className="relative z-[2] w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-center">
         <motion.div
           initial={{ opacity: 0, x: -24 }}
           animate={{ opacity: 1, x: 0 }}
@@ -94,17 +94,17 @@ const InitialSection = () => {
         >
           <div className="w-full max-w-sm sm:max-w-md lg:max-w-none">
             <img
-              src="/profile_photo.png"
+              src="/without-background.png"
               alt="Arjun"
-              className="w-full h-auto min-h-[420px] sm:min-h-[460px] lg:min-h-[540px] max-h-[68vh] lg:max-h-[min(84vh,46rem)] object-cover object-top"
+              className="w-full h-auto min-h-[420px] sm:min-h-[460px] lg:min-h-[540px] max-h-[58vh] lg:max-h-[min(68vh,46rem)] object-cover object-top"
             />
           </div>
         </motion.div>
 
 
-        <div className="relative w-full lg:flex-1 flex flex-col items-center lg:items-start text-center lg:text-left min-w-0">
+        <div className="relative w-full lg:flex-1 flex flex-col items-center lg:items-start text-center lg:text-left min-w-0 mt-40">
           <AnimatedText
-            text="Hi, I'm Arjun Nepali"
+            text="Hi, I'm Er.Arjun Nepali"
             className="text-4xl sm:text-5xl md:text-6xl xl:text-7xl text-heading-primary mb-4 [text-align:inherit] w-full drop-shadow-sm"
           />
 

@@ -10,17 +10,17 @@ const experiences = [
     company: "Prixa Technologies",
     duration: "Apr 2023 – Present",
     description:
-      "Working for 2 year on various news,fantech,inventory, and digital platforms. Responsible for developing, maintaining, and optimizing modern web applications.",
+      "I have been working for 2 years on various news,fantech,inventory, and digital platforms. Responsible for developing, maintaining, and optimizing modern web applications.",
     techStack: ["Next.js", "Django", "PostgreSQL", "TailwindCSS"],
   },
   {
     id: 2,
-    role: "Freelance Developer",
-    company: "Projects / Clients",
-    duration: "Jan 2024 – Present",
+    role: "Freelancing ",
+    company: "Projects(own projects & Clients)",
+    // duration: "Jan 2024 – Present",
     description:
-      "Developed websites, landing pages, and web apps for individual clients and startups, including deployment, SEO, and performance optimization.",
-    techStack: ["React", "Next.js", "Django", "TailwindCSS"],
+      "i have been working on own ideas as well as for clients on websites, landing pages, and web apps, including deployment, SEO, and performance optimization.",
+    techStack: ["Next.js", "Django", "TailwindCSS","FastAPI"],
   },
 ];
 
@@ -61,7 +61,7 @@ const WorkExperience = () => {
       <div className="relative z-10 mx-auto w-full max-w-7xl min-w-0">
         <div className="mb-16 text-center">
           <h2 className="mb-4 text-5xl text-heading-primary">
-            Work & Freelance Experience
+            Work Experience
           </h2>
           <div className="mx-auto h-1.5 w-24 rounded-full bg-gradient-to-r from-transparent via-accent to-transparent" />
         </div>
@@ -70,7 +70,7 @@ const WorkExperience = () => {
           {experiences.map((exp) => (
             <article
               key={exp.id}
-              className="rounded-2xl border border-slate-200/90 p-6 dark:text-white text-slate-900 shadow-lg backdrop-blur-sm dark:border-border dark:bg-secondary dark:text-slate-100 dark:shadow-[0_4px_24px_rgba(0,0,0,0.35)] md:p-8"
+              className="rounded-2xl border border-slate-200/90 p-6 text-body-secondary shadow-lg backdrop-blur-sm dark:border-border dark:bg-secondary not-first:mt-10 md:p-8"
             >
               <div className="flex gap-4 sm:gap-5">
                 <div
@@ -81,16 +81,16 @@ const WorkExperience = () => {
                 </div>
 
                 <div className="min-w-0 flex-1">
-                  <h3 className="text-xl font-semibold text-slate-900 md:text-2xl dark:text-white">
+                  <h3 className="text-xl font-semibold text-heading-primary">
                     {exp.role}
                   </h3>
-                  <p className="mt-0.5 text-sm text-slate-600 dark:text-slate-300">
+                  <p className="mt-0.5 text-sm">
                     {exp.company}
                   </p>
                   <p className="mt-2 text-sm font-medium tabular-nums text-accent dark:text-sky-300">
                     {exp.duration}
                   </p>
-                  <p className="mt-4 leading-relaxed text-slate-700 dark:text-slate-300">
+                  <p className="mt-4 leading-relaxed text-body-secondary">
                     {exp.description}
                   </p>
                   {/* <div className="mt-5 flex flex-wrap gap-2">
