@@ -175,6 +175,78 @@ export const portfolioProjects: PortfolioProject[] = [
     imagePath: "/projects/hospital-management.jpg",
     repoUrl: "https://github.com/arjun-nepali/hospital-management-system",
   },
+  {
+    id: 9,
+    slug: "ukaalo-news-platform",
+    date: "2025-03-01",
+    title: "Ukaalo News Platform",
+    stack: "Django / DRF / CMS",
+    description:
+      "Digital news platform with dynamic CMS, content workflows, and scalable publishing features.",
+    points: [
+      "Built and maintained a role-based CMS for content publishing and media management.",
+      "Implemented dynamic category, tag, and article management workflows.",
+      "Optimized backend APIs and database queries for high-traffic news delivery.",
+      "Developed scalable publishing features with editor and reporter workflows.",
+    ],
+    imagePath: "/projects/ukaalo.jpg",
+    liveUrl: "https://www.ukaalo.com/",
+    is_key_project: true,
+  },
+  {
+    id: 10,
+    slug: "new-business-age",
+    date: "2025-02-01",
+    title: "New Business Age",
+    stack: "Django / DRF / CMS",
+    description:
+      "Business news and magazine platform with scalable CMS and content management tools.",
+    points: [
+      "Developed and enhanced CMS features for business news publishing.",
+      "Implemented article scheduling, media handling, and role-based workflows.",
+      "Built scalable backend APIs for content delivery and management.",
+      "Improved platform performance and maintainability for editorial operations.",
+    ],
+    imagePath: "/projects/new-business-age.jpg",
+    liveUrl: "https://www.newbusinessage.com/",
+    is_key_project: true,
+  },
+
+  {
+    id: 11,
+    slug: "giwms-government-system",
+    date: "2025-01-01",
+    title: "GIWMS Government System",
+    stack: "Django / Multi-Tenant",
+    description:
+      "Multi-tenant government management system serving nationwide administrative operations.",
+    points: [
+      "Maintained and developed features for a government platform serving office,manicipality,and ward levels.",
+      "Implemented scalable multi-tenant architecture and role-based access control.",
+      "Optimized backend performance and database operations for large-scale usage.",
+      "Developed APIs and workflows for administrative and reporting systems.",
+    ],
+    imagePath: "/projects/giwms.jpg",
+    is_key_project: true,
+  },
+  {
+    id: 12,
+    slug: "bikashnews-platform",
+    date: "2024-12-01",
+    title: "BikashNews Platform",
+    stack: "Django / DRF / CMS",
+    description:
+      "Online news portal with scalable CMS and dynamic publishing workflows.",
+    points: [
+      "Developed backend APIs and CMS modules for article publishing.",
+      "Implemented category, media, and user management systems.",
+      "Optimized content delivery and backend performance.",
+      "Built role-based workflows for editors and reporters.",
+    ],
+    imagePath: "/projects/bikashnews.jpg",
+    liveUrl: "https://bikashnews.com/",
+      is_key_project: true,
+    },
 ];
 
 export function getProjectBySlug(slug: string): PortfolioProject | undefined {
